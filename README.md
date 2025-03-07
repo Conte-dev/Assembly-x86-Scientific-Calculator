@@ -1,61 +1,47 @@
-# Calcolatrice in Assembly x86
+# Calcolatrice Scientifica in Assembly x86
 
-## Descrizione
-Questa calcolatrice scritta in Assembly x86 permette di eseguire diverse operazioni matematiche fondamentali, tra cui:
-- **Fattoriale** di un numero
-- **Potenza** con esponente arbitrario
-- **Logaritmo** in qualsiasi base
-- **Somma**, **differenza**, **moltiplicazione** e **divisione** tra due numeri
+## Panoramica
+Questa è un'implementazione in linguaggio assembly x86 di una calcolatrice scientifica compatibile con emu8086. La calcolatrice offre operazioni aritmetiche di base e funzioni matematiche più complesse.
+
+## Funzionalità
+- Operazioni di base:
+  - Addizione
+  - Sottrazione
+  - Moltiplicazione
+  - Divisione (con resto)
+- Operazioni avanzate:
+  - Potenza
+  - Fattoriale
+  - Logaritmo in base personalizzata
+  - Radice quadrata
 
 ## Requisiti
-- Processore x86
-- Assemblatore compatibile (es. TASM)
-- Emulatori compatibili (es. DOSBox o Emu8086)
+- Emulatore emu8086
 
-## Installazione
-1. Clona o scarica questo repository.
-2. Compila il codice sorgente con TASM:
-   ```bash
-   tasm calcolatrice.asm
-   tlink calcolatrice.obj
-   ```
-3. Avvia l'emulatore e carica il file:
-   - **DOSBox**: Copia il file `.exe` in una cartella accessibile e avvialo da DOSBox con:
-     ```bash
-     mount c C:\percorso_cartella
-     c:
-     calcolatrice.exe
-     ```
-   - **Emu8086**: Apri il file `.asm` direttamente nell'IDE di Emu8086 e avvialo.
+## Istruzioni per l'uso
+1. Caricare il programma in emu8086
+2. Eseguire il programma
+3. Seguire il menu a schermo per selezionare le operazioni
+4. Inserire i numeri richiesti
+5. Visualizzare i risultati
+6. Premere 's' per continuare con un altro calcolo o 'n' per uscire
 
-## Utilizzo
-Il programma presenta un'interfaccia testuale dove l'utente può scegliere l'operazione desiderata e inserire i numeri richiesti.
-
-### Operazioni disponibili:
-- **1:** Fattoriale (n!)
-- **2:** Potenza (base^esponente)
-- **3:** Logaritmo (log_base(numero))
-- **4:** Somma (a + b)
-- **5:** Differenza (a - b)
-- **6:** Moltiplicazione (a * b)
-- **7:** Divisione (a / b)
-
-L'utente seleziona un'opzione e inserisce i numeri necessari per l'operazione.
-
-## Struttura del codice
-Il codice è organizzato in sezioni:
-- **Input dell'utente**: Lettura dell'operazione e dei numeri
-- **Elaborazione**: Implementazione delle operazioni matematiche
-- **Output**: Stampa del risultato a schermo
-
-## Note
-- Il fattoriale è implementato ricorsivamente fino al valore massimo supportato da un intero a 32-bit.
-- Il logaritmo viene calcolato tramite la formula `log_b(x) = ln(x) / ln(b)` utilizzando approssimazioni.
-- La divisione utilizza registri EAX ed EDX per gestire quoziente e resto.
+## Note Importanti
+- **Non eseguire in modalità schermo intero** - il programma potrebbe non funzionare correttamente quando visualizzato a schermo intero
+- La divisione per zero viene gestita con un messaggio di errore
+- Gli esponenti negativi non sono supportati
+- Il logaritmo richiede numeri positivi e una base maggiore di 1
+- La radice quadrata funziona solo con numeri non negativi
+- **La calcolatrice lavora esclusivamente con numeri interi**
 
 ## Autore
-Creato da [Il Tuo Nome].
+Conte-dev
 
-## Licenza
-Questo progetto è distribuito sotto la licenza MIT.
+## Come Funziona
+La calcolatrice utilizza la libreria emu8086 per gestire le operazioni di input/output e implementa vari algoritmi matematici in assembly x86:
+- La radice quadrata utilizza il metodo di Newton per l'approssimazione
+- Il logaritmo viene calcolato utilizzando divisioni ripetute
+- Il fattoriale viene calcolato utilizzando un semplice ciclo
+- L'elevamento a potenza utilizza moltiplicazioni ripetute
 
+Buon utilizzo della calcolatrice scientifica in assembly x86!
