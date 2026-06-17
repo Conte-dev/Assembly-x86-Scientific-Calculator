@@ -1,6 +1,5 @@
-![header](https://capsule-render.vercel.app/api?type=waving&height=250&color=gradient&customColorList=0,1,2&text=Assembly%20x86%20Calculator&fontAlignY=40&fontSize=52&animation=fadeIn)
+![header](https://capsule-render.vercel.app/api?type=rect&height=180&color=gradient&customColorList=0,2&text=Assembly%20x86%20Calculator&fontAlignY=55&fontSize=48)
 # Calcolatrice Scientifica in Assembly x86
-
 ## Panoramica
 Questa è un'implementazione in linguaggio assembly x86 di una calcolatrice scientifica compatibile con emu8086. La calcolatrice offre operazioni aritmetiche di base e funzioni matematiche più complesse.
 
