@@ -1,12 +1,10 @@
 <svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- gradiente sfondo -->
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0f0f0f"/>
       <stop offset="100%" stop-color="#1c1c1c"/>
     </linearGradient>
 
-    <!-- gradiente completamente arancione -->
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#ff7a00"/>
       <stop offset="100%" stop-color="#ffb347"/>
@@ -19,46 +17,54 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+
+    <clipPath id="avatarClip">
+      <circle cx="1020" cy="155" r="75"/>
+    </clipPath>
   </defs>
 
-  <!-- Sfondo -->
+  <!-- background -->
   <rect width="1200" height="300" fill="url(#bg)"/>
 
-  <!-- griglia-->
-  <g opacity="0.08">
-    <path d="M0 50 H1200 M0 100 H1200 M0 150 H1200 M0 200 H1200 M0 250 H1200" stroke="#ffffff"/>
-    <path d="M100 0 V300 M200 0 V300 M300 0 V300 M400 0 V300 M500 0 V300
-             M600 0 V300 M700 0 V300 M800 0 V300 M900 0 V300 M1000 0 V300 M1100 0 V300"
+  <!-- grid -->
+  <g opacity="0.06">
+    <path d="M0 60 H1200 M0 120 H1200 M0 180 H1200 M0 240 H1200" stroke="#ffffff"/>
+    <path d="M120 0 V300 M240 0 V300 M360 0 V300 M480 0 V300 M600 0 V300
+             M720 0 V300 M840 0 V300 M960 0 V300 M1080 0 V300"
           stroke="#ffffff"/>
   </g>
 
+  <!-- accent bar -->
   <rect x="80" y="70" width="6" height="160" fill="url(#accent)" filter="url(#glow)"/>
 
-  <!-- Titolo-->
-  <text x="110" y="150"
+  <!-- title -->
+  <text x="120" y="150"
         fill="#ffffff"
-        font-size="52"
+        font-size="54"
         font-family="JetBrains Mono, Consolas, monospace"
         font-weight="700">
     Assembly x86 Calculator
   </text>
 
-  <!-- descrizione -->
-  <text x="110" y="195"
+  <!-- subtitle -->
+  <text x="120" y="195"
         fill="#b5b5b5"
         font-size="20"
         font-family="JetBrains Mono, Consolas, monospace">
     Low-level arithmetic calculator
   </text>
 
-  <!-- Fac simile codice-->
-  <g opacity="0.15" font-family="monospace" font-size="16" fill="#ff7a00">
-    <text x="820" y="110">mov eax, 5</text>
-    <text x="820" y="135">add eax, 3</text>
-    <text x="820" y="160">imul ebx</text>
-    <text x="820" y="185">int 0x80</text>
-  </g>
+  <!-- avatar -->
+  <image href="assets/image.jpg"
+         x="945" y="80"
+         width="150" height="150"
+         preserveAspectRatio="xMidYMid slice"
+         clip-path="url(#avatarClip)"/>
 
-  <!-- bordo -->
-  <circle cx="1100" cy="80" r="60" fill="url(#accent)" opacity="0.08"/>
+  <!-- avatar border -->
+  <circle cx="1020" cy="155" r="75"
+          fill="none"
+          stroke="url(#accent)"
+          stroke-width="3"
+          filter="url(#glow)"/>
 </svg>
