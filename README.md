@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=soft&height=240&color=gradient&customColorList=18,19&text=Assembly%20x86%20Calculator&fontAlignY=45&fontSize=50&animation=fadeIn)
+![header](https://capsule-render.vercel.app/api?type=soft&height=240&color=gradient&customColorList=0,1,2&text=Assembly%20x86%20Calculator&fontAlignY=45&fontSize=52&animation=fadeIn)
 # Calcolatrice Scientifica in Assembly x86
 
 ## Panoramica
