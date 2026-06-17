@@ -55,11 +55,13 @@
   </text>
 
   <!-- avatar -->
-  <image href="./image.jpg"
-         x="945" y="80"
-         width="150" height="150"
-         preserveAspectRatio="xMidYMid slice"
-         clip-path="url(#avatarClip)"/>
+<image href="https://raw.githubusercontent.com/Conte-dev/Assembly-x86-Scientific-Calculator/main/assets/image.jpg"
+       x="945"
+       y="80"
+       width="150"
+       height="150"
+       preserveAspectRatio="xMidYMid slice"
+       clip-path="url(#avatarClip)"/>
 
   <!-- avatar border -->
   <circle cx="1020" cy="155" r="75"
