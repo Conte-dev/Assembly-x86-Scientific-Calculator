@@ -1,6 +1,30 @@
 <svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="300" fill="#111111"/>
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
 
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0b0b"/>
+      <stop offset="50%" stop-color="#111111"/>
+      <stop offset="100%" stop-color="#0a0f1a"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff8c00"/>
+      <stop offset="50%" stop-color="#ff3c78"/>
+      <stop offset="100%" stop-color="#7c4dff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="300" fill="url(#bg)"/>
+
+  <!-- Grid -->
   <g opacity="0.12" stroke="#ffffff" stroke-width="0.3">
     <line x1="0" y1="75" x2="1200" y2="75"/>
     <line x1="0" y1="150" x2="1200" y2="150"/>
@@ -16,16 +40,40 @@
     <line x1="1080" y1="0" x2="1080" y2="300"/>
   </g>
 
-  <rect x="80" y="70" width="6" height="160" fill="#ff8c00" rx="2"/>
+  <!-- Stars -->
+  <g fill="#ffffff" opacity="0.35">
+    <circle cx="200" cy="40" r="2"/>
+    <circle cx="340" cy="90" r="1.5"/>
+    <circle cx="520" cy="60" r="2"/>
+    <circle cx="780" cy="120" r="1.8"/>
+    <circle cx="980" cy="70" r="1.2"/>
+    <circle cx="1100" cy="140" r="2"/>
+  </g>
 
-  <text x="110" y="155"
+  <!-- Accent bar -->
+  <rect x="80" y="70" width="6" height="160" rx="2"
+        fill="url(#accent)" filter="url(#glow)"/>
+
+  <!-- Title -->
+  <text x="130" y="155"
         fill="#ffffff"
         font-size="54"
         font-family="monospace"
-        font-weight="700">Assembly x86 Calculator</text>
+        font-weight="700"
+        filter="url(#glow)">
+    Assembly x86 Calculator
+  </text>
 
-  <text x="110" y="195"
-        fill="#888888"
+  <!-- Subtitle -->
+  <text x="130" y="195"
+        fill="#9aa0a6"
         font-size="20"
-        font-family="monospace">Low-level arithmetic calculator</text>
+        font-family="monospace">
+    Low-level arithmetic calculator
+  </text>
+
+  <!-- Accent underline -->
+  <rect x="130" y="210" width="520" height="2"
+        fill="url(#accent)" opacity="0.8"/>
+
 </svg>
