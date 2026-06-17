@@ -55,7 +55,7 @@
   </text>
 
   <!-- avatar -->
-  <image href="assets/image.jpg"
+  <image href="./image.jpg"
          x="945" y="80"
          width="150" height="150"
          preserveAspectRatio="xMidYMid slice"
