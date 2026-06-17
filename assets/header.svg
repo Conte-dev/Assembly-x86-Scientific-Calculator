@@ -20,6 +20,10 @@
       </feMerge>
     </filter>
 
+    <clipPath id="avatarClip">
+      <circle cx="1030" cy="155" r="80"/>
+    </clipPath>
+
   </defs>
 
   <!-- BACKGROUND -->
@@ -29,13 +33,12 @@
   <g opacity="0.05">
     <path d="M0 60 H1200 M0 120 H1200 M0 180 H1200 M0 240 H1200"
           stroke="#ffffff"/>
-
     <path d="M120 0 V300 M240 0 V300 M360 0 V300 M480 0 V300
              M600 0 V300 M720 0 V300 M840 0 V300 M960 0 V300 M1080 0 V300"
           stroke="#ffffff"/>
   </g>
 
-  <!-- ACCENT BAR -->
+  <!-- ACCENT -->
   <rect x="80" y="70" width="6" height="160"
         fill="url(#accent)"
         filter="url(#glow)"/>
@@ -57,21 +60,18 @@
     Low-level arithmetic calculator
   </text>
 
-  <!-- FAKE AVATAR (100% GITHUB SAFE) -->
+  <!-- AVATAR IMAGE -->
+  <image href="./image.jpg"
+         x="950" y="75"
+         width="160" height="160"
+         preserveAspectRatio="xMidYMid slice"
+         clip-path="url(#avatarClip)"/>
+
+  <!-- BORDER -->
   <circle cx="1030" cy="155" r="80"
-          fill="#2a2a2a"
+          fill="none"
           stroke="#ffffff"
           stroke-width="4"
           filter="url(#glow)"/>
-
-  <!-- initials -->
-  <text x="1030" y="165"
-        text-anchor="middle"
-        fill="#ffffff"
-        font-size="30"
-        font-family="monospace"
-        font-weight="700">
-    C
-  </text>
 
 </svg>
