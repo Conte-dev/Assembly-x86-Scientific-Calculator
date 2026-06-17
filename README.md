@@ -33,10 +33,6 @@ Questa è un'implementazione in linguaggio assembly x86 di una calcolatrice scie
 - Il logaritmo richiede numeri positivi e una base maggiore di 1
 - La radice quadrata funziona solo con numeri non negativi
 - **La calcolatrice lavora esclusivamente con numeri interi**
-
-## Autore
-Conte-dev
-
 ## Come Funziona
 La calcolatrice utilizza la libreria emu8086 per gestire le operazioni di input/output e implementa vari algoritmi matematici in assembly x86:
 - La radice quadrata utilizza il metodo di Newton per l'approssimazione
@@ -44,4 +40,5 @@ La calcolatrice utilizza la libreria emu8086 per gestire le operazioni di input/
 - Il fattoriale viene calcolato utilizzando un semplice ciclo
 - L'elevamento a potenza utilizza moltiplicazioni ripetute
 
-Buon utilizzo della calcolatrice scientifica in assembly x86!
+## Autore
+Conte-dev
