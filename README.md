@@ -1,3 +1,4 @@
+![header](https://capsule-render.vercel.app/api?type=waving&height=260&color=gradient&customColorList=6,12,30&text=TacOS&fontAlignY=40&animation=fadeIn&fontSize=70)
 # Calcolatrice Scientifica in Assembly x86
 
 ## Panoramica
